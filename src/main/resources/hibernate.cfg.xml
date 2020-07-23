@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://192.168.99.100:5432/hibernatedb</property>
+        <property name="connection.username">user</property>
+        <property name="connection.password">password</property>
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+        <!-- Disable the second-level cache -->
+        <!--        <property name="cache.use_second_level_cache">true</property>-->
+        <!--        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>-->
+
+
+        <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">false</property>
+        <!--        <property name="hbm2ddl.auto">create</property>-->
+        <!-- not to drop schema -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- use xml to define mapping rules -->
+        <!--        <mapping resource="com/websystique/hibernate/model/Student.hbm.xml"/>-->
+        <!--        <mapping class="io.tao.embed.UserDetails"/>-->
+        <!--        <mapping class="io.tao.collection.UserDetails"/>-->
+
+        <!--        <mapping class="io.tao.UserDetails"/>-->
+
+        <!-- onetoone package -->
+        <!--        <mapping class="io.tao.onetoone.UserDetails"/>-->
+        <!--        <mapping class="io.tao.onetoone.Vehicle"/>-->
+
+        <!-- onetomany package -->
+        <!--        <mapping class="io.tao.onetomany.UserDetails"/>-->
+        <!--        <mapping class="io.tao.onetomany.Vehicle"/>-->
+
+        <!-- manytomany package -->
+        <!--        <mapping class="io.tao.manytomany.UserDetails"/>-->
+        <!--        <mapping class="io.tao.manytomany.Vehicle"/>-->
+
+
+        <!-- inheritance.singletable package -->
+        <!--        <mapping class="io.tao.inheritance.singletable.TwoWheeler"/>-->
+        <!--        <mapping class="io.tao.inheritance.singletable.FourWheeler"/>-->
+        <!--        <mapping class="io.tao.inheritance.singletable.Vehicle"/>-->
+
+        <!-- inheritance.tableperclass package -->
+        <!--        <mapping class="io.tao.inheritance.tableperclass.TwoWheeler"/>-->
+        <!--        <mapping class="io.tao.inheritance.tableperclass.FourWheeler"/>-->
+        <!--        <mapping class="io.tao.inheritance.tableperclass.Vehicle"/>-->
+
+
+        <!-- inheritance.joined package -->
+        <!--        <mapping class="io.tao.inheritance.joined.TwoWheeler"/>-->
+        <!--        <mapping class="io.tao.inheritance.joined.FourWheeler"/>-->
+        <!--        <mapping class="io.tao.inheritance.joined.Vehicle"/>-->
+
+        <!-- crud package -->
+        <!--        <mapping class="io.tao.crud.UserDetails" />-->
+
+        <!-- object package -->
+        <!--        <mapping class="io.tao.object.UserDetails"/>-->
+
+        <!-- hql package -->
+        <!--        <mapping class="io.tao.hql.UserDetails"/>-->
+
+        <!-- namedquery package -->
+        <!--        <mapping class="io.tao.namedquery.UserDetails" />-->
+
+        <!-- criteriaapi package -->
+        <mapping class="io.tao.criteriaapi.UserDetails"/>
+
+    </session-factory>
+</hibernate-configuration>
